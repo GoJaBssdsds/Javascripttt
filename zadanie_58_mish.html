@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <script type="text/javascript">
+    var x = prompt("Podaj pierwszą liczbę:", "");
+    var liczba1_mish = parseInt(x);
+    var x = prompt("Podaj drugą liczbę:", "");
+    var liczba2_mish = parseInt(x);
+
+    if (liczba1_mish < liczba2_mish) {
+      for (var i = liczba1_mish; i <= liczba2_mish; i++) {
+        if (i % 2 == 1) {
+          document.write('<p style="color:green; font-size:24px;">' + i + '</p>');
+        }
+      }
+    } else if (liczba1_mish > liczba2_mish) {
+      for (var i = liczba1_mish; i >= liczba2_mish; i--) {
+        if (i % 2 == 1) {
+          document.write('<p style="color:blue; font-size:12px;">' + i + '</p>');
+        }
+      }
+    } else {
+      alert("Podane liczby są równe. Brak obliczeń.");
+      document.write("Brak<br>");
+    }
+  </script>
+</body>
+</html>

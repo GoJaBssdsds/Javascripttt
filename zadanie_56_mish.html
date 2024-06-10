@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        for (var i = 0; i <= 39; i++) {
+            var w_mish = i * i + i + 42;
+            document.write("i=" + i + " w(" + i + ")=" + w_mish + "<br>");
+            
+            if ((i + 1) % 5 === 0 && i !== 39) {
+                if (!confirm("Aby kontynuować, naciśnij dowolny klawisz (Naciskaj, naciskaj)")) {
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

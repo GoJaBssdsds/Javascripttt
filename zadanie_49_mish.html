@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div style="color:red; font-size:50px;">
+      <script language="JavaScript">
+        var silnia_koniec = parseFloat(prompt("Podaj liczbę do obliczenia silni:", ""));
+        
+        if (silnia_koniec === 0) {
+          document.write("silnia = 1");
+        } else {
+          var silnia_mish = 1;
+          
+          for (var i = 1; i <= silnia_koniec; i++) {
+            silnia_mish *= i;
+          }
+          
+          document.write("silnia = " + silnia_mish);
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script type="text/javascript">
+
+    var a_mish = parseFloat(prompt("Podaj wysokość (a):"));
+    var b_mish = parseFloat(prompt("Podaj szerokość (b):"));
+
+    for (var i = 1; i <= b_mish; i++) {
+      document.write("*");
+    }
+    document.write("<br>");
+
+    var wiersz_mish = "*";
+    for (var i = 1; i <= (b_mish - 2) * 2; i++) {
+      wiersz_mish += "&nbsp;";
+    }
+    wiersz_mish += "*<br>";
+
+    for (var i = 1; i <= a_mish - 3; i++) {
+      document.write(wiersz_mish);
+    }
+
+    document.write("*");
+    for (var i = 1; i <= ((b_mish - 3) * 2) / 2; i++) {
+      document.write("&nbsp;");
+    }
+    document.write("a");
+    for (var i = 1; i <= ((b_mish - 3) * 2) / 2; i++) {
+      document.write("&nbsp;");
+    }
+    document.write("*<br>");
+
+    for (var i = 1; i <= a_mish - 3; i++) {
+      document.write(wiersz_mish);
+    }
+
+    for (var i = 1; i <= b_mish; i++) {
+      document.write("*");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<textarea rows="50" cols="70">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div style="color: red; font-size: 50px;">
+            <script language="JavaScript">
+                var a_mish, b_mish, c_mish;
+    
+                do {
+                    a_mish = parseFloat(prompt("a=",""));
+                    b_mish = parseFloat(prompt("b=",""));
+                    c_mish = parseFloat(prompt("c=","")); 
+                    
+                    if (a_mish > 0 && b_mish > 0 && c_mish > 0 && 
+                        a_mish + b_mish > c_mish && a_mish + c_mish > b_mish && c_mish + b_mish > a_mish) {
+                        document.write("trójkąt się zamyka");
+                    } else {
+                        document.write("trójkąt nie zamyka się" + "<br>");
+                    }
+                } while (false);
+            </script>
+        </div>
+    </body>
+    </html>
+    

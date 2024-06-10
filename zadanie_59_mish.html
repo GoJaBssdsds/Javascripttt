@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Punkty kratowe w kole</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+    function liczbaPunktowKratowych(R_mish) {
+      let licznik = 0;
+
+      for (let i_mish = Math.floor(-R_mish - 1); i_mish <= Math.ceil(R_mish + 1); i_mish++) {
+        for (let j_mish = Math.floor(-R_mish - 1); j_mish <= Math.ceil(R_mish + 1); j_mish++) {
+
+          if (i_mish * i_mish + j_mish * j_mish <= R_mish * R_mish) {
+            licznik++;
+          }
+        }
+      }
+      return licznik;
+    }
+
+    let R_mish = parseFloat(prompt("Podaj promień R:"));
+
+    let N_R = liczbaPunktowKratowych(R_mish);
+    document.write("Liczba punktów kratowych w kole o promieniu " + R_mish + " wynosi: " + N_R + "<br>");
+
+    let promienie = [2.01, 4.50, 100 + 13, 1000 + 13]; 
+    for (let R of promienie) {
+      let liczbaPunktow = liczbaPunktowKratowych(R);
+      document.write("Promień: " + R + ", Liczba punktów kratowych: " + liczbaPunktow + "<br>");
+    }
+  </script>
+</body>
+</html>
